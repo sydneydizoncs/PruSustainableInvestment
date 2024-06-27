@@ -2,7 +2,7 @@ const API_URL = 'http://localhost:5001/api/stocks';
 
 export const fetchAllStockData = async () => {
   try {
-    const response = await fetch('http://localhost:5001/api/stocks');
+    const response = await fetch('http://ec2-3-80-224-207.compute-1.amazonaws.com:5001/api/stocks');
     const data = await response.json();
     return data;
   } catch (error) {
@@ -13,7 +13,7 @@ export const fetchAllStockData = async () => {
 
 export const fetchStockData = async (ticker) => {
   try {
-    const response = await fetch(`http://localhost:5001/api/stocks/${ticker}`);
+    const response = await fetch(`http://ec2-3-80-224-207.compute-1.amazonaws.com:5001/api/stocks/${ticker}`);
     const data = await response.json();
     return data;
   } catch (error) {
